@@ -1,0 +1,26 @@
+---
+title: "Problem Set 2"
+author: "Donovan Doyle"
+date: "2/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(dplyr)
+library(kableExtra)
+library(knitr)
+library(stringr)
+library(readxl)
+```
+
+# Question 1
+```{r q1, include = FALSE}
+nhl <- read_delim("nhlps2.csv", delim="\t")
+```
+It is helpful to see both because in hockey you have to play both offense and defense, as only 5 skaters are on the ice at one time. It would be impossible to evaluate a player's true impact on the ice if we only looked at his offensive production, because he could be terrible at defense. Net shots taken is a more robust statistic, as it compares the number of opportunities created while a player is on the ice versus the number of opportunities he allows. This is different from baseball in that a hitter can only affect the game with offense in one given sequence, and a fielder can only affect the game with defense in one given sequence, whereas in hockey possession is much more fluid, and any offensive move made will in turn affect your defense.
+
+# Question 2
+We care about relative shot percentage versus others on your team because teams will vary in their raw number of shots, so shot percentage is a more true indicator of your output compared to your shot number. For example, if you took the 5th most shots on your team but were on the team that took the most shots in the league, people may think you handle a big workload on offense when compared to the leading shooter of the team that takes the least shots. It's similar to a fixed effect because the error would be constant across individuals if we looked at only shot numbers, while looking at relative shot percentage versus others on your team incorporates that error into the coefficient.
+
+
