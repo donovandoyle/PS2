@@ -136,6 +136,32 @@ $(document).ready(function () {
 <h1>Question 2</h1>
 <p>We care about relative shot percentage versus others on your team because teams will vary in their raw number of shots, so shot percentage is a more true indicator of your output compared to your shot number. For example, if you took the 5th most shots on your team but were on the team that took the most shots in the league, people may think you handle a big workload on offense when compared to the leading shooter of the team that takes the least shots. It’s similar to a fixed effect because the error would be constant across individuals if we looked at only shot numbers, while looking at relative shot percentage versus others on your team incorporates that error into the coefficient.</p>
 </div>
+<div id="question-3" class="section level1">
+<h1>Question 3</h1>
+<p>The correlation between PDO and lagged_PDO is only 0.14, which is very weak, but doesn’t necessarily mean they’re not serially correlated. I also ran a regression that graphs lagged_PDO onto PDO, controlling for: games, age, salary, goals_sixty, assists_sixty, goals, assists, toi, corsi, cfrel_percent, all other lags included, and shots. Lagged_PDO was significant at the 99% level, meaning we are confident they are serially correlated. In the regression, it says that with a PDO of 103.38, the following year we’d expect a PDO of roughly 100.5, a slight decrease. This corresponds with the 59th percentile of the PDO data, a significant decrease from the 95th percentile the year before.</p>
+</div>
+<div id="question-4" class="section level1">
+<h1>Question 4</h1>
+<p>The 95th percentile of goals is 21. If a player scored 21 goals one year, we would expect him to score around 15 the next year, a drop to the 80th percentile. The correlation between goals and lagged goals is 0.447. The 95th percentile of cfrel_percent is 6.26. If a player had a cfrel_percent of 6.26, we would expect him to have a cfrel_percent of around 3 the next year, which corresponds with a drop to the 78th percentile, roughly. The correlation between cfrel_percent and lagged_cfrel_percent is 0.63. The most replicable from year to year is goals, as this has the lowest drop in percentile. This would make sense, as goals doesn’t control for volume, and a player who has a good year the year before will likely be more aggressive and take more shots the next year, in turn scoring a lot again, even if he’s not that effective of a player in other metrics. This would likely be due to pressure from fans on the coach to set the player up for shots, as they see him as a high-goal scorer and more deserving of the puck.</p>
+</div>
+<div id="question-6" class="section level1">
+<h1>Question 6</h1>
+<p>Undervalued players would be those with a low PDO, as this seems to be where regression to the mean is most present, given the drop from the player in the 95th percentile. Other undervalued players would be those with a high cfrel_percent but a low amount of goals, as they are actually extremely efficient players and their presence on the ice is correlated with opportunities for the team to score/limiting the other teams’ opportunities, they just aren’t the ones who score the goals themselves.</p>
+</div>
+<div id="part-b" class="section level1">
+<h1>Part B</h1>
+</div>
+<div id="question-1-1" class="section level1">
+<h1>Question 1</h1>
+<p>This isn’t a good metric, because, hypothetically, if in the long-run a players round average is 70, and he’s shot really well the first 3 rounds with an average of 66, odds are he’ll revert back to his typical mean and shoot over 70 in the last round. This unfairly punishes players for experiencing luck in the first 3 rounds that they won’t necessarily experience in the fourth.</p>
+</div>
+<div id="question-2-1" class="section level1">
+<h1>Question 2</h1>
+<p>The only way to truly test a player’s skill would be to give them all the exact same group, same broadcast coverage, same weather, same standing in the tournament, same familiarity with the course, and the same pretty much anything else that could impact a player’s performance outside of skill, then see how they shoot for multiple rounds. This is pretty obviously impossible/not feasible, as players likely never even end up in the same situation twice themselves.</p>
+</div>
+<div id="question-3-1" class="section level1">
+<h1>Question 3</h1>
+</div>
 
 
 
