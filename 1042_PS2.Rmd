@@ -74,11 +74,12 @@ The only way to truly test a player's skill would be to give them all the exact 
 # Question 3
 *a)* We can compare their play in the random groups to their play in the sorted groups, because if they're in a top sorted group, they're going to get more broadcast time. This is likely the best way for us to quantify the significance of pressure, given the variables we have.
 *b)* Having Tiger Woods in your group means you're going to have much more pressure on you, since he is the poster boy of golf and will always have the highest broadcast numbers. When casual fans watch golf, they generally always know how Tiger is doing, and if you're in Tiger's group, they're also watching you. 
-*c)* Other players with predictive effects like Tiger might be Phil Mickelson or Rory McIlroy (these are the only two golfers who come to mind to me, and I don't follow golf at all, so that's likely a decent heuristic for who is most popular).
-```{r}
-q3c <- pga
-  
+*c)* Other players with predictive effects like Tiger might be Phil Mickelson or Rory McIlroy (these are the only two golfers who come to mind to me, and I don't follow golf at all, so that's likely a decent heuristic for who is most popular). We should include fixed effects for tournaments, because some tournaments are much more heavily broadcasted than others, so that must be factored into our analysis.
+```{r include = FALSE}
 
-?case_when
+
+q3maybe <- pga
+
 ```
 
+# Question 4
